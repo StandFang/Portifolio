@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #5b005b; /* Fundo roxo */
+    color: white; /* Texto branco */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img.logo-small {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul.menu li {
+    margin-left: 15px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul.menu li a:hover {
+    background-color: #ff5722; /* Cor de destaque ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #4b004b; /* Fundo mais escuro para contraste */
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form input, .contact form textarea {
+    background-color: #ffffff20; /* Fundo semitransparente */
+    color: white;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+    color: #ffffffa0;
+}
+
+.contact form button {
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #e64a19;
+}
+
+.contact .social-links a {
+    color: white;
+    font-size: 1rem;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact .social-links a:hover {
+    background-color: white;
+    color: #5b005b;
+}
+
+/* Sobre */
+.about {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about .profile-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about img.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.about ul li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ff5722;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Projetos */
+.projects {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.project-item {
+    background-color: #4b004b;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(100% - 2rem);
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    font-size: 1rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+/* Estilo para os botões expansíveis */
+.toggle-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.hidden-text {
+    display: none;
+    font-size: 14px;
+    margin-top: 5px;
+    color: white;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para as imagens dos projetos */
+.project-item img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.project-item h3 {
+    color: orange;
+    text-align: center;
+    font-size: 20px;
+}
+
+.project-item p {
+    text-align: justify;
+    margin: 10px 20px;
+}
